@@ -1,0 +1,11 @@
+{
+	"name": "package-merge",
+	"version": "0.1.0",
+	"description": "Intelligently merge `package.json` files.",
+	"author": "Izaak Schroeder <izaak.schroeder@gmail.com>",
+	"main": "lib/merge.js",
+	"dependencies": {
+		"acorn": "^1.2.2",
+		"semver-set": "^0.1.0"
+	}
+}
