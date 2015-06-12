@@ -30,4 +30,13 @@ describe('#merge', function() {
 
 		expect(result.dependencies).to.have.property('express', '^5.0.0');
 	});
+
+	it('should work on emptiness', function() {
+		var result = JSON.parse(merge(
+			fixture('complete'),
+			fixture('dependencies')
+		));
+
+		expect(result.dependencies).to.have.property('express', '^5.0.0');
+	});
 });
