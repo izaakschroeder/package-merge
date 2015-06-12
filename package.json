@@ -4,8 +4,16 @@
 	"description": "Intelligently merge `package.json` files.",
 	"author": "Izaak Schroeder <izaak.schroeder@gmail.com>",
 	"main": "lib/merge.js",
+	"scripts": {
+		"test": "./node_modules/.bin/_mocha -R spec test/spec"
+	},
 	"dependencies": {
-		"acorn": "^1.2.2",
+		"jju": "^1.2.0",
+		"semver": "^4.3.6",
 		"semver-set": "^0.1.0"
+	},
+	"devDependencies": {
+		"mocha": "^2.2.5",
+		"chai": "^3.0.0"
 	}
 }
