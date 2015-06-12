@@ -1,6 +1,6 @@
 {
 	"name": "package-merge",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Intelligently merge `package.json` files.",
 	"author": "Izaak Schroeder <izaak.schroeder@gmail.com>",
 	"main": "lib/merge.js",
