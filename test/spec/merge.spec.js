@@ -39,4 +39,14 @@ describe('#merge', function() {
 
 		expect(result.dependencies).to.have.property('express', '^5.0.0');
 	});
+
+	it('should accept object literal for argument "src"', function() {
+		var result = JSON.parse(merge(
+			fixture('complete'),
+			{ dependencies: { foo: '^42.0.0' } }
+		));
+
+		expect(result.dependencies).to.have.property('foo', '^42.0.0');
+	});
+
 });
