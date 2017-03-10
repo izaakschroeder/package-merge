@@ -39,4 +39,13 @@ describe('#merge', function() {
 
 		expect(result.dependencies).to.have.property('express', '^5.0.0');
 	});
+
+	it('should using existing strings for variables where possible', () => {
+		var result = JSON.parse(merge(
+			fixture('complete'),
+			fixture('dependencies')
+		));
+
+		expect(result.version).to.equal('10.3.1');
+	});
 });
