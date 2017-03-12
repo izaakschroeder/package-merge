@@ -31,6 +31,25 @@ describe('#merge', function() {
 		expect(result.dependencies).to.have.property('express', '^5.0.0');
 	});
 
+	it('should maintain order of dependency packages', function () {
+		var result = merge(
+			fixture('complete'),
+			fixture('dependencies')
+		);
+		var dependencySection = result.match(/\"dependencies\": \{([\s\S]*?)\}/m)[1];
+		var dependencyNames = dependencySection.split("\n")
+			.filter(function (line) {
+				return line.trim().length > 0;
+			})
+			.map(function (line) {
+				return line.match(/\"(.*)\":/)[1];
+			});
+
+		var sortedDependencies = Object.keys(JSON.parse(result).dependencies);
+		sortedDependencies.sort();
+		expect(dependencyNames).to.eql(sortedDependencies);
+	});
+
 	it('should work on emptiness', function() {
 		var result = JSON.parse(merge(
 			fixture('complete'),
