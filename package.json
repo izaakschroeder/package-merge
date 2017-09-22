@@ -1,19 +1,20 @@
 {
-	"name": "package-merge",
-	"version": "0.1.2",
-	"description": "Intelligently merge `package.json` files.",
-	"author": "Izaak Schroeder <izaak.schroeder@gmail.com>",
-	"main": "lib/merge.js",
-	"scripts": {
-		"test": "./node_modules/.bin/_mocha -R spec test/spec"
-	},
-	"dependencies": {
-		"jju": "^1.2.0",
-		"semver": "^4.3.6",
-		"semver-set": "^0.1.1"
-	},
-	"devDependencies": {
-		"mocha": "^2.2.5",
-		"chai": "^3.0.0"
-	}
+  "name": "package-merge",
+  "version": "0.1.2",
+  "description": "Intelligently merge `package.json` files.",
+  "author": "Izaak Schroeder <izaak.schroeder@gmail.com>",
+  "main": "lib/merge.js",
+  "scripts": {
+    "test": "./node_modules/.bin/_mocha -R spec test/spec"
+  },
+  "dependencies": {
+    "jju": "^1.2.0",
+    "lodash": "^4.17.4",
+    "semver": "^4.3.6",
+    "semver-set": "^0.1.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "chai": "^3.0.0"
+  }
 }
