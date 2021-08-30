@@ -7,6 +7,10 @@
 	"scripts": {
 		"test": "./node_modules/.bin/_mocha -R spec test/spec"
 	},
+	"repository": {
+    "type": "git",
+    "url": "https://github.com/izaakschroeder/package-merge.git",
+  },
 	"dependencies": {
 		"jju": "^1.2.0",
 		"semver": "^4.3.6",
